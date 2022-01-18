@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <input type="button" id="um" value="Oi" class="formata" style="color:red;font-family: Arial;">
+    <hr>
+    <input type="button" id="dois" value="Ui">
+    <hr>
+    <input type="button" id="tres" value="Ai" >
+    <hr>
+    <p class="formata">Paragrafo 1</p>
+    <p>Paragrafo 2</p>
+    <p>Paragrafo 3</p>
+
+    <script>
+    let unico = document.querySelector('.formata');
+    //trará somente o 1o que tiver a classe formata
+        document.write(unico.tagName + "<br>")
+        document.write(unico.className + "<br>")
+        document.write(unico.id + "<br>")
+        document.write(unico.style + "<br>")
+        document.write(unico.style.color + "<br>")
+        document.write(unico.style.fontFamily + "<hr>")
+
+
+     ///   para retonar tosos que tem aclass formata utilizar o 
+     // document.querySelectorAll('.formata');
+     //retornará um Array e nos seus indices terao os objects
+     //similar a document.getElementsByClassName('formata');
+
+    let todos = document.querySelectorAll('.formata');//
+        document.write(todos[0].tagName + "<br>")
+        document.write(todos[0].className + "<br>")
+        document.write(todos[0].value + "<br>")
+        
+        document.write(todos[1].tagName + "<br>")
+        document.write(todos[1].className + "<br>")
+        document.write(todos[1].innerHTML + "<br>")
+    </script>
+
+</body>
+</html>

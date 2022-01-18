@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function alerta(info,info2){
+            document.write("Alertando "+info+" - "+info2+"<hr>");
+        }
+        alerta("Vai chover","se ferrou!!!!");
+
+        ///////////////////////////////////////////////////////////////////
+        //função anonima atribuida a uma variavel
+        let alerta2 = function(info,info2){
+            document.write("Alertando "+info+" - "+info2+"<hr>");
+        }
+        alerta2("Neblina","Aeroporto fechado!!!!");
+        ///////////////////////////////////////////////////////////////////
+        //arrow function atribuida a uma variavel
+        const alerta3 = (info,info2)=>{
+            document.write("Alertando "+info+" - "+info2+"<hr>");
+        }
+        alerta3("Neve","Pista derrapante!!!!");
+        alert(alerta3);
+    </script>
+</body>
+</html>

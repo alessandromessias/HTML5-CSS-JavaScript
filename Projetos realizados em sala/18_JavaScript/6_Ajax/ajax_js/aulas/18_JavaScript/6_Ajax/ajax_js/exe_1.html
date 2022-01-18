@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+
+</head>
+
+<body>
+<div>
+  <input type="button" name="botao" id="botao" value="Button">
+</div>
+<div id="resposta" style="border:black solid 1px"></div>
+
+
+
+<script type="text/javascript" language="javascript">
+	/*
+	AJAX - ASYNCHRONUS JAVASCRIPT AND XML
+	
+	OBJETO - XMLHttpRequest - nao faz parte do DOM
+	padrozinado pelo w3c
+	
+	Carregamento de conteudos c/ JavaScript - xml, txt, json
+	
+	Criado pela Microsoft - em 2006 w3c transformou em recomendacao oficial
+	
+	sincrona - uma acao que eu disparo e espero o retorno dela para fazer outra coisa
+	
+	Assincrono - disparo um link e continuo navegando na pagina, executando outras acoes(por debaixo dos panso)
+	*/
+
+	document.querySelector('#botao').addEventListener('click',()=>{					
+					//implementacao do ajax
+					//criar o objeto XMLHttpRequest
+					//atraves dele faremos todas as nossas requisicoes
+					
+					var ajax = new XMLHttpRequest();//readyState = 0
+					//propriedade do obj XMLHttpRequest - pega um tipo de resposta do servidor - uma alteracao de status na comunicacao cliente servidor
+					ajax.onreadystatechange = ()=>{
+						//alert(ajax.readyState);
+							/*
+							ajax.readyState
+							0 - comunicacao nao iniciada
+							1 - inicio de comunicacao
+							2 - imicio de requisicao - algo foi encaminhado para o servidor
+							3 - servidor em processo de envio de resposta
+							4 - servidor acaboude enviar a resposta da requisicao
+							*/
+							if(ajax.readyState == 4){
+								alert(ajax.status);
+								alert(ajax.statusText);
+								alert(ajax.responseText);
+								let resp = document.querySelector('#resposta');
+								resp.innerHTML += ajax.responseText;//resp.innerHTML = resp.innerHTML +ajax.responseText
+								
+							}
+					}
+					////////////////////////////////////////////////////////////////////////////////
+					//indica aoajax quais os dados de endereco de afrquivoque ele acessará no servidor
+					//dois parametros obrigatorios - metodo(GET e POST sao os mais populares) e url(valor relativo ou absoluto - no mesmoservidor)
+					//tres parametros opcionais - assincronia(padrao true) - usuario e senha
+					ajax.open("GET","arquivo.txt",true); //readyState = 1
+					//ajax.send(nome=edu&idade=54)
+					ajax.send();//readyState = 2
+					//respostas
+					//status - numero - 200 se ok - 404 nao encontrada
+					//alert(ajax.status);
+					
+					//status em formato de texto
+					//alert(ajax.statusText);
+					
+					//responseText = para carregamento de conteudo texto
+					//alert(ajax.responseText);
+					
+					//responseXML= para carregamento de conteudo xml
+					//alert(ajax.responseXML);
+					
+				
+	});
+	</script>
+</body>
+</html>

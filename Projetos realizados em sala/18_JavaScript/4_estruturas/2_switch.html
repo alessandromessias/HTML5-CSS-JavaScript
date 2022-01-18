@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      
+        dia = new Date;
+        document.write(dia);
+        document.write("<br>");
+        document.write(dia.getFullYear());
+        document.write("<br>");
+        document.write(dia.getMonth());
+        document.write("<br>");
+        document.write(dia.getDay());
+
+        dia2 = new Date(1960,08,18,16,45);
+        document.write(dia2);
+        document.write("<br>");
+        document.write(dia2.getFullYear());
+        document.write("<br>");
+        document.write(dia2.getMonth());
+        document.write("<br>");
+        document.write(dia2.getDay());
+
+        dia3 = dia2.getDay();
+        switch(dia3){
+            case 0:
+                diaSemana = "Domingo";
+                break;
+            case 1:
+                diaSemana = "Segunda-feira";
+                break;
+            case 2:
+                diaSemana = "Terça-feira";
+                break;
+            case 3:
+                diaSemana = "Quarta-feira";
+                break;
+            case 4:
+                diaSemana = "Quinta-feira";
+                break;
+            case 5:
+                diaSemana = "Sexta-feira";
+                break;
+            case 6:
+                diaSemana = "Sabado";
+                break;
+            default:
+                diaSemana = "QuarValor Invalidota-feira";
+        }
+        document.write("<br>");
+        document.write(diaSemana);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

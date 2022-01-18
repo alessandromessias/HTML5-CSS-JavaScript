@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.1.1.js"></script>
+    <script>
+        //$(document).ready();
+        //$(document).ready(function(){});
+        $(document).ready(function(){ 
+            //$('#aperte').click();    
+            $('#aperte').click(function(){
+                var info = $('#entrada').val();
+                $('#entrada').val('');
+
+                //$('#escuta')
+                //$('#escuta').css('color','red');
+                //$('#escuta').css('background-color','lightgreen');
+                //$('#escuta').css('background-color','lightgreen').css('color','red').text(info);
+                $('#escuta')    .css('background-color','lightgreen')
+                                .css('color','red')
+                                .text(info);
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>
+        <input type="text" id="entrada" value="Pensamentos Positivos">
+        <input type="button" id="aperte" value="Click aqui!!!!!">
+    </p> 
+    <p id="veja">Bela  Recatada e do Lar</p>
+    <p id="escuta">London Calling</p>
+</body>
+</html>

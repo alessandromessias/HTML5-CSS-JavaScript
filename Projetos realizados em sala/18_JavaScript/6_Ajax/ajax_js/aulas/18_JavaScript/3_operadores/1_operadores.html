@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+     <script>
+         //OPERADOR DE ATRIBUIÇÃO
+         let num = 51;//num recebe 51 ou 51 é atribuido à num
+         document.write(num + "<br>");//51
+
+        num = num + 9;//acumulando
+        document.write(num + "<br>");//60
+
+        num++;//num = num +1 => 61 => incremento
+        document.write(num + "<br>");//61
+        num--;//num = num -1 => 60 => decremento
+        document.write(num + "<br>");//60
+        
+        let nome = "Eduardo ";
+         document.write(nome + "<br>");//Eduardo
+         nome = nome + "Pretel";
+         document.write(nome + "<br>");//Eduardo Pretel
+
+        
+         /////////////////////////////////////////////////////////////////////
+         //Operadores Aritimeticos
+         /*
+            + adição
+            - subtração
+            * multiplicação 
+            / divisao
+            % resto da divisao
+         */
+
+         document.write((5+3) + "<br>");
+         document.write((5-3) + "<br>");
+         document.write((5*3) + "<br>");
+         document.write((5/3) + "<br>");
+         document.write(parseInt(5/3) + "<br>");
+         document.write((5%3) + "<br>");
+
+         //Operador literal => concatenação
+         document.write(("5"+"3") + "<br>");
+         document.write(("5"+3) + "<br>");
+         document.write((parseFloat("5")+3) + "<br>");
+
+         /////////////////////////////////////////////////////////////////////////
+         /*
+         Operadores de comparação
+         Compara 2 valores e retorna true ou false
+         == igualdade = verifica o valor mas não verifica o tipo
+         === identico= verifica o valor e o tipo
+         */
+        document.write(("5" == "3") + "<br>");//false
+        document.write(("5" == 5) + "<br>");//true
+        document.write(("5" === 5) + "<br>");//false
+
+        // diferent - nao existe <>
+        // != nao igual => ! é o perador de negação
+        document.write(("5" != "3") + "<br>");//true
+        document.write(("5" != 5) + "<br>");//false
+        document.write(("5" !== 5) + "<br>");//true
+
+        //valores e  maior ">" e menor"<"
+        document.write(("5" > "3") + "<br>");//true
+        document.write(("5" < 5) + "<br>");//false
+        document.write(("5" < 7) + "<br>");//true
+
+        //valores e  maior ou igual ">=" e menor ou igual "<=" ::::: nao pode =>  =<
+        document.write(("5" >= "3") + "<br>");//true
+        document.write(("5" <= 5) + "<br>");//true
+
+        document.write("<hr>");
+        ///////////////////////////////////////////////////////////////////////////////
+        // OPERADORES LOGICOS ///////////////////////////////////////////////////////////
+        //AND => && => TODAS as comparações devem retornar verdadeiras
+        document.write("Operadores Logicos"  + "<br>");
+        document.write("and - &&"  + "<br>");
+
+        document.write(5===5 && "5"==5 && 5 !== "5");//(true && true && true) => true
+        document.write("<br>");
+        document.write(5===5 && "5"==5 && "5"!== "5");//(true && true && false) => false
+
+        document.write("or - ||"  + "<br>");
+        //OR => || => BAsta uma ser verdadeira que o conjunto de comparaçoes retornará verdaderia
+        //para retornar FALSE TODAS tem que ser false
+        document.write(5===5 || "5"==5 || 5 !== "5");//(true || true || true) => true
+        document.write("<br>");
+        document.write(5===5 || "5"!=5 || 5 === "5");//(true || false || false) => true
+        document.write("<br>");
+        document.write(5!==5 || "5"!=5 || 5 === "5");//(false || false || false) => false
+        document.write("<br>");
+
+        document.write("<hr>");
+        ///////////////////////////////////////////////////////////////////////////////
+        // OPERADORES ternario ///////////////////////////////////////////////////////////
+        document.write("Ternario"  + "<br>");
+        document.write( 5 !== 5 ? "É Nois" : "Danou-se");
+        document.write("<br>");
+        document.write( 5 === 5 ? "É Nois" : "Danou-se");
+
+         document.write("<br>");
+        document.write((5 === 5) ? ("É Nois") : ("Danou-se") );
+
+        document.write("<br>");
+        let retorno = (5 === 5)?("É Nois") : ("Danou-se")
+        document.write(retorno );
+
+        
+    </script>
+
+
+</body>
+</html>

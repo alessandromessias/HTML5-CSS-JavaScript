@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <input type="button" id="um" value="Oi" class="formata" style="color:red;font-family: Arial;">
+    <hr>
+    <input type="button" id="dois" value="Ui" class="formata">
+    <hr>
+    <input type="button" id="tres" value="Ai" >
+    <hr>
+    <p class="formata">Paragrafo 1</p>
+    <p>Paragrafo 2</p>
+    <p>Paragrafo 3</p>
+    <script>
+        let classe = document.querySelector('input');
+            //ele retornará apenas o 1o elemento com aquela tag
+            console.log(classe.value);//oi
+    
+            //// para substituir o getElementsByTagName
+            let classes = document.querySelectorAll('input');
+            console.log(classes[0].value);//
+            //console.log(classes.um.value);// nao funciona
+            console.log(classes[1].value);//
+            console.log(classes[2].innerHTML);//
+        </script>
+</body>
+</html>

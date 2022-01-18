@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<title>HTML 5 – A Nova Onda</title>
+<style type="text/css">
+/* seletor universal - serve para todas as caixas*/
+*{
+	margin: 0;
+	padding: 0;
+}
+#um{
+	background-color: red;
+	position:static;
+	/* position fixed precisa ser declarado
+	
+	Propriedades  top botton left right são contadas a partir da coordenas 0 ou origem da TELA
+
+    PORTANTO A CAIXA SAI DA FILA E A FILA ANDA
+
+    A caixa NÂO rola com a tela
+    a caixa fica parada
+	*/
+	top:50px;
+	left:50px;
+}
+#dois{
+	background-color: green;
+    position:fixed;
+	left:500px;
+    top:50px;
+    z-index: 1;
+}
+#tres{
+	background-color: aqua;
+	
+}
+#quatro{
+	background-color: grey;
+	left:500px;
+    top:500px;
+    position:absolute;
+    z-index: 0;
+}
+#setecentos{
+    background-color: darkseagreen;
+    position:absolute;
+    top:100px;
+    left:100px;
+    
+    /*
+    para que as coordenadas do position absolute seja contadas a partir do ) do paidele
+    ou seja, o #setecentos contando a partir do 0 do #quatro
+    O pai - no caso o #quatro - tem que ser NÂO static - ser absolute, relative ou fixed
+    */
+}
+
+
+#cinco{
+	background-color: red;
+	position:static;
+}
+#seis{
+	background-color: green;
+	position:static;
+}
+#sete{
+	background-color: aqua;
+	position:static;
+}
+#oito{
+	background-color: grey;
+	position:static;
+}
+
+div{
+	
+	border: 1px solid black;
+	width:300px;
+	height:300px;
+}
+</style>
+</head>
+<body>
+
+<div id="um">
+	<h1>um</h1>
+</div>
+
+<div id="dois">
+	<h1>dois</h1>
+
+</div>
+
+<div id="tres">
+	<h1>tres</h1>
+</div>
+
+<div id="quatro">
+	<h1>quatro</h1>
+    <div id="setecentos">
+        <h1>setecentos</h1>
+    </div>
+</div>
+
+<div id="cinco">
+	<h1>cinco</h1>
+</div>
+<div id="seis">
+	<h1>seis</h1>
+</div>
+<div id="sete">
+	<h1>sete</h1>
+</div>
+<div id="oito">
+	<h1>oito</h1>
+</div>
+ </body>
+</html>

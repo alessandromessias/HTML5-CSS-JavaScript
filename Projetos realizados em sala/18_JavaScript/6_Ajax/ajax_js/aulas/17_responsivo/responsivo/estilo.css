@@ -1,0 +1,146 @@
+/*
+Para o projeto float
+
+Mudar o lay out de fixo para fluido
+layout fixo = medidas fixas => px, cm, mm, pt
+fluido => medidas em porcentagem
+
+contexto => 768px tamanho do site dentro da resolução de tela escolhida (alvo)
+alvo => a resolução de tela escolhida - 1680px
+
+unidade relativa: contexto /alvo * 100
+768/1680*100 = 45.71428571428571%
+
+150/768*100=19.531525%
+618/768*100 = 80.46875%
+
+Para a fonte nao se usa porcentagem - %
+Se usa a medida em
+1em => tamanho da fonte padrao do dispositivo
+
+
+##################################################
+alvo:960px
+contexto 1024
+alvo/contexto *100
+
+
+*/
+/* MOBILE FIRST */
+*{
+    margin:0;
+    padding:0;
+}
+img{
+    width:100%;
+    height:auto;
+}
+header.header img{
+    max-width: 234px;
+}
+
+nav{
+    margin-bottom: 3em;
+}
+
+nav li{
+    list-style-type: none;
+    background-color: #54CDE2;
+    border:1px solid #069;
+    text-align: center;
+    margin-bottom: 2px;
+    line-height: 30px;
+}
+nav li a,a{
+    color:#006;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:.94em;
+    text-decoration: none;
+    display:block;
+}
+
+#coluna1, #coluna2, #coluna3, #coluna4{
+    width:100%;
+    height:auto;
+    border:1px solid grey;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+p{
+    text-align:justify;
+    font-size:.81em;
+    padding: 2em 0.92%;
+}
+h1{
+    color:#006;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.69em;
+}
+h2{
+    color:#006;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.13em;
+}
+#rodape{
+    background-color: #3891C0;
+    line-height: 4em;
+}
+#rodape p{
+    text-align: center;
+}
+
+/*
+        Media Type: depende do dispotivo de acesso e NÂO do tamanho da tela
+        ALL
+        print
+        projection
+        HandHell => dispositivos Moveis
+        screen
+        */
+@media only screen and (min-width:480px){
+    nav li{
+        float:left;
+        width:25%;
+        box-sizing: border-box;
+    }
+    #coluna1{
+        width:47%;
+        float:left;
+        margin-right: 6%;
+    }
+    #coluna2{
+        width:47%;
+        float:left;
+    }
+    #coluna3{
+        width:47%;
+        clear:both;
+        float:left;
+        margin-right: 6%;
+    }
+    #coluna4{
+        width:47%;
+        float:left;
+    }
+    #rodape{
+        clear:both;
+    }
+}
+
+@media only screen and (min-width:768px){
+    #coluna1{
+        width:20.5%;
+        
+    }
+    #coluna2{
+        width:20.5%;
+        margin-right: 6%;
+    }
+    #coluna3{
+        width:20.5%;
+        clear:none;
+    }
+    #coluna4{
+        width:20.5%;
+    }
+}

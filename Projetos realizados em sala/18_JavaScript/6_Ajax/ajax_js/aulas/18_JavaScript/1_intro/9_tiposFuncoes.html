@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function alerta(info,info2){
+            document.write("Alertando "+info+", "+info2+"<hr>");
+        }
+        alerta("Vai chover","se ferrou!!!!");
+        alerta("Neblina","Aeroporto Fechado!!!!");
+
+        ///////////////////////////////////////////////////////////////////
+        //função anônima  atribuida a uma variavel ou a uma propriedade
+        let alerta2 = function(info,info2){
+            document.write("Alertando 2 "+info+", "+info2+"<hr>");
+        }
+        alerta2("Vai chover","se ferrou!!!!");
+        alerta2("Neblina","Aeroporto Fechado!!!!");
+
+        ///////////////////////////////////////////////////////////////////
+        //arrow function  atribuida a uma variavel ou a uma propriedade
+        const alerta3 = (info,info2)=>{
+            document.write("Alertando 3 "+info+", "+info2+"<hr>");
+        }
+        alerta3("Vai chover","se ferrou!!!!");
+        alerta3("Neblina","Aeroporto Fechado!!!!");
+    </script>
+</body>
+</html>

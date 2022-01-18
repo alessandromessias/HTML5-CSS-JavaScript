@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Mídias</title>
+   <meta charset="utf-8">
+   <meta name="description" content="Pagina de Midias do tutorial HTML">
+   <meta name="keywords" content="HTML, CSS, JavaScript">
+   <meta name="author" content="Edu Pretel">
+   
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Qahiri&display=swap" rel="stylesheet">
+
+
+   <style type="text/css">
+      @font-face {
+         font-family: ilhabela;
+         src: url('FONTFACE/Akronim-Regular.ttf') format('truetype');
+      }
+      .fonteExterna{
+         font-family: 'ilhabela';
+      }
+      .fontCdn{
+         font-family: 'Qahiri', sans-serif;
+      }
+   </style>
+</head>
+
+<body>
+   <h2 class="fontCdn">Mídias</h2>
+
+   <p class="fonteExterna">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ligula tortor, luctus fringilla lacinia id, posuere
+      vel purus. Donec faucibus mollis ex vulputate pretium. Nulla.Lorem ipsum dolor sit amet, consectetur adipiscing
+      elit. Sed ligula tortor, luctus fringilla lacinia id, posuere vel purus. Donec faucibus mollis ex vulputate
+      pretium. Nulla.</p>
+
+   <h2 class="especial">Mapa</h2>
+
+   <p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0843745682655!2d-46.65456188454477!3d-23.565412967628074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c7940306f1%3A0x1befb07f56f03c6d!2sAv.%20Paulista%2C%201001%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001311-100!5e0!3m2!1spt-BR!2sbr!4v1637064104436!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+   </p>
+
+   <p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.2650046617155!2d-46.661236984545106!3d-23.55892396738849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59cd07d4a6f5%3A0x5f3e864b6d5f059!2sAv.%20Paulista%2C%202000%20-%20Cerqueira%20C%C3%A9sar%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-200!5e0!3m2!1spt-BR!2sbr!4v1637064331425!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+   </p>
+   <h2 class="especial">Vídeo HTML5</h2>
+   <video controls loop autoplay muted style="width:50%; height:50%" id="video1">
+      <source src="Video/video.mp4" type="video/mp4" />
+      <source src="Video/video.ogv" type="video/ogv">
+      <source src="Video/video.webm" type="video/webm">
+      <track src="fgsubtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+      Seu navegador não suporta a tag VIDEO.
+   </video>
+<button onclick="document.querySelector('#video1').play()">Tocar</button> 
+<button onclick="document.querySelector('#video1').pause()">Parar</button> 
+<button onclick="document.querySelector('#video1').style.width='70%'">Mudar</button> 
+
+
+
+   <h2 class="especial">Audio</h2>
+<audio controls loop id="som">
+   <source src="AUDIO/Fifth.mp3" type="audio/mp3">
+</audio>
+
+
+   <h2 class="especial">Vídeo Youtube</h2>
+
+   <p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/2EkyM6A0mJA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   </p>
+   <P>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/YmjVgqZ21tU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   </P>
+
+<hr>
+<h2>IFRAME</h2>
+<iframe src="../9_projeto_float/index.html" width="1000" height="500"></iframe>
+
+<hr>
+<h2>IFRAME</h2>
+<iframe src="http://www.impacta.com.br" width="1000" height="500"></iframe>
+
+
+
+
+
+</body>
+
+</html>

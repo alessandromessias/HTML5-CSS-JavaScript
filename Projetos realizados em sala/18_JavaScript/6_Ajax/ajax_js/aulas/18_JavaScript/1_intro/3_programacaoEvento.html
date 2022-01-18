@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .formata{
+            color:brown;
+            font-size: 20px;
+            font-family: Arial;
+        }
+    </style>
+    <script >
+        function primeira()
+        {
+            nome = window.prompt('Entre com seu nome');
+            alert(nome);
+            console.log(nome);
+           // document.write('<p class="formata">'+nome+'</p>');
+        }
+        
+    </script>
+</head>
+<body>
+    <input type="button" id="um" value="Click" onclick="javascript:primeira()">
+    <hr>
+    <input type="button" id="dois" value="DoubleClick" ondblclick="primeira()" >
+    <hr>
+    <input type="button" id="tres" value="Mouse Over" onmouseover="primeira()" >
+    <hr>
+</body>
+</html>

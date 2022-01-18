@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label{
+            width: 130px;
+            display: inline-block;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <form action="http://edupretel.com.br/html5_impacta/mensagem.php" method="post">
+        <fieldset>
+            <legend>Informações Pessoais</legend>
+            <p>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" placeholder="Digite o seu nome" required>
+            </p>
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Digite o seu email">
+            </p>
+            <p>
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" id="senha" placeholder="Digite o sua Senha">
+            </p>
+            <p>
+                <label for="data">Data de Nascimento:</label>
+                <input type="date" name="data" id="data">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Locações</legend>
+
+            <p>
+                <label for="cidadeNasc">Cidade de Nascimento</label>
+                <select name="cidadenasc" id="cidadeNasc" required>
+                    <option value="">Escolha</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="PA">Pará</option>
+                    <option value="BA" selected="selected">Bahia</option><!--selected estilo xhtml-->
+                    <option value="TO">Tocantins</option>
+                    <option value="AM">Amazonas</option>
+                </select>                    
+            </p>
+            <p>
+                <label for="cidadeMoradia">Cidade de Moradia</label>
+                <select name="cidadeMoradia[]" id="cidadeMoradia" multiple>
+                    
+                    <option value="SP">São Paulo</option>
+                    <option value="PA" selected>Pará</option>
+                    <option value="BA">Bahia</option>
+                    <option value="TO" selected >Tocantins</option>
+                    <option value="AM">Amazonas</option>
+                </select>                    
+            </p>
+            </fieldset>
+            <p>Sexo:</p>
+            <input type="radio" name="sexo" id="sexoM" value="M">
+            <label for="sexoM">Masculino</label>
+
+            <input type="radio" name="sexo" id="sexoF" value="F" checked>
+            <label for="sexoF">Feminino</label>
+            <!--name pode ser os 2 mas o ID não
+            quando for criar o formulário e só pode ter 1 resposta certa (NOME com o mesmo nome e ID diferente)-->
+            
+            <p>Idioma:<br>
+            <input type="checkbox" name="idiomas[]" id="idiomasI" value="ing">
+            <label for="idiomasI">Inglês</label>
+
+            <input type="checkbox" name="idiomas[]" id="idiomasE" value="esp">
+            <label for="IdiomasE">Espanhol</label>
+
+            <input type="checkbox" name="idiomas[]" id="idiomasFr" value="fra">
+            <label for="IdiomasFr">Francês</label>
+
+            <input type="checkbox" name="idiomas[]" id="idiomasJp" value="Jap">
+            <label for="IdiomasJp">Japonês</label>
+            <!-- Array [] para que o servidor possa ler mais de 1 informação-->
+            </p>
+            
+            <label for="nome">CPF:</label>
+                <input type="text" 
+                name="cpf" 
+                id="cpf" 
+                
+                title="Digite o CPF no Formato 000.000.000-00"
+                pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" 
+                oninvalid="return alert('CPF Invalido')"
+                
+                placeholder="Digite o seu CPF" 
+                required>
+            </p>
+
+            <p>
+                <input type="hidden" name="recipient" id="recipient" value="ale_mmessias@hotmail.com">
+                <input type="hidden" name="subject" id="subject" value="Teste de E-mail">
+                <input type="hidden" name="redirect" id="redirect" value="obrigado.html">
+            </p>
+        <p>
+            <input type="reset" value="Limpar Formulário">
+            <input type="submit" value="Enviar Formulário">
+        </p>
+    </form>
+</body>
+</html>

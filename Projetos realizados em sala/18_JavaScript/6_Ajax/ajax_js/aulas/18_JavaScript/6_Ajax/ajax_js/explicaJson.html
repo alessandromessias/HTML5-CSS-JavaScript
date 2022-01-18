@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let feriado = {"Republica":"15","finados":"2"};
+        document.write(feriado+"<br>");
+        document.write(feriado.Republica + "<br>");
+        let feriadoString = JSON.stringify(feriado);
+        document.write(feriadoString+"<hr>");
+
+        let sucos = '{"delvalle":"uva","maguary":"pessego"}';
+        document.write(sucos+"<br>");
+        let sucosObj = JSON.parse(sucos);
+        document.write(sucosObj+"<br>");
+        document.write(sucosObj.delvalle+"<br>");
+    </script>
+</body>
+</html>

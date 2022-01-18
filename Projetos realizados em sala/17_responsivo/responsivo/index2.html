@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Design Responsivo - Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="estilos.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="container">
+  <header class="header">
+    <div>
+      <img src="img/logo-spacetours.png" alt="Logo Space tours" class="logo">
+    </div>
+    <nav>
+        <ul id="menu" class="esconde">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Pacotes</a></li>
+          <li><a href="#">Contato</a></li>
+          <li id="icon"><a href="javascript:void(0)" id="kiwi">&#9776;</a></li>
+        </ul>
+
+    </nav>
+  </header>
+      
+<section id="banner">
+    <picture>
+      <source srcset="img/c.jpg" media="(max-width: 350px)">
+      <!--
+      <source srcset="img/banner2.jpg" media="only screen and (max-width: 479px)">
+      -->
+      <source srcset="img/banner2.jpg" media="(max-width: 479px)">
+      <img id="oi" src="img/banner.jpg">
+    </picture>
+  		<div class="caixa">
+          <h1>NY: Capital do Mundo!</h1>
+          <p>Experimente a mudança de paradigma de conhecer a Capital do Mundo de um novo ponto de vista.</p>
+          <a href="#">Leia depoimentos</a>
+        </div>
+</section>    
+    
+
+  <section id="principal">
+      <div id="coluna1">
+       
+        <h2>Word Trade Center - 21/09.</h2>
+         <figure class="foto"><img src="img/foto-01.jpg"></figure>
+        <p>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.
+ Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.</p>
+      </div>
+
+      <div id="coluna2">
+       
+        <h2>Manhattan and Brooklyn Bridge</h2>
+         <figure class="foto"><img src="img/foto-02.jpg"></figure>
+        <p>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.
+ Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.</p>
+      </div>
+
+      <div id="coluna3">
+        
+        <h2>Estátua da Liberdade</h2>
+         <figure class="foto"><img src="img/foto-03.jpg"></figure>
+        <p>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.
+ Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.</p>
+      </div>
+
+      <div id="coluna4">
+        
+        <h2>Dicas do guia para você: </h2>
+         <figure class="foto"><img src="img/foto-04.jpg"></figure>
+        <p>CPhasellus viverra nulla ut metus varius laoreet. Quisque rutrum.
+ Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.</p>
+      </div>
+</section>
+
+  <footer id="rodape">
+      <p>2015 Ed Pretel - alunos@edupretel.com.br</p>
+  </footer>
+</div>
+ <script>
+   document.querySelector('#kiwi').addEventListener('click',()=>{
+      let menu = document.querySelector('#menu');
+      if(menu.className === 'esconde'){
+          menu.className = 'mostra';
+      }else{
+           menu.className = 'esconde';
+      }
+
+   });
+ </script>
+
+</body>
+</html>

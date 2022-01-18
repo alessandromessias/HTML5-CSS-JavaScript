@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /*
+        box-model: margin padding border CONTENT(conteudo - width) 
+        width:  bloco- 100% do pai - 
+                linha - adequa ao conteudo e Width e height nao funcionam
+        height: adequa ao conteudo
+        content - conteudo
+        box-sizing: 
+                content-box é o padrao e nao precisa ser declarado e é o width do conteudo(content) somente
+                border-box precisa declarado e o width será  content+paddind+border 
+
+    
+        *{
+            margin:0;
+            padding:0;
+        }
+    */
+    body{
+       font-size: 100%;
+    }
+    #um{
+        /*
+        margin, padding e border
+        1 - 4posiçoes
+        2 - top/bottom left/right
+        3 - top left/right bottom
+        4 - top right left bottom => sentido horario
+        */
+        margin: 0px;
+        border:25px solid black;
+        padding:80px;
+        width:50%;/*(content)*/
+
+        /*
+        box-sizing:
+        content-box é o padrao e nao precisa ser declarado e é o width do conteudo(content) somente
+        border-box precisa declarado e o width será  content+paddind+border 
+        */
+        box-sizing:border-box;
+
+        font-size: 1rem;
+        text-align: justify;
+
+        border-radius: 30px ;
+        margin: auto;
+    }
+    /* ################################################################################# */
+    /* formarar a lista */
+    ul#cores {/* ul que se chama cores */
+        background-color: chocolate;
+        border: 1px solid black;
+        padding:0;
+        list-style-type:lower-greek;
+        /*
+        */
+        list-style-image: url('gifs pequeninos/anibucket.gif');
+        list-style-position: inside;
+    }
+    #cores> li{/* li que é filha de cores */
+        background-color: darkgray;
+        border: 1px solid red;
+        
+    }
+    /* ################################################################################# */
+    /* formarar os menus */
+    nav{
+        border:1px solid coral;
+        background-color: yellow;
+        width:25%;
+    }
+    nav ul{
+        border:1px solid blue;
+        background-color: blueviolet;
+        list-style-type: none;
+        padding: 0;
+        margin:0;
+        
+    }
+    nav li{
+        border:1px solid green;
+        background-color: white;
+       
+    }
+    nav a{
+        padding:10px;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align:center;
+        background-color: violet;
+        display:block;
+    }
+    /* pseudo classes LoVe HAte */
+    nav a:link, nav a:visited{
+        background-color: red;
+        color:black;
+        text-decoration: none;
+        transition: background-color 1s, color 1s;
+
+    }
+    nav a:hover{
+        background-color: black;
+        color:white;
+    }
+    nav a:active{
+        background-color: white;
+        color:red;
+        text-decoration: underline;
+        font-style: italic;
+    }
+    /* Final apoteotico 1*/
+    #vertical ul li{
+        width:20px;
+        overflow: hidden;
+        transition:width 1s;
+    }
+    #vertical li:hover{
+        width:100%;
+        
+    }
+    /* Final apoteotico 1*/
+    #horizontal,#horizontal ul{
+        width: 100%;
+    }
+    #horizontal li{
+        width:25%;
+        box-sizing: border-box;
+        float:left;
+    }
+    
+    </style>
+</head>
+<body>
+    <p id="um" class="impar">
+        Quando pessoas entram em nossas vidas por uma "Estação", é porque chegou sua vez de
+		dividir, crescer e aprender. Elas trazem para você a experiência da paz, ou fazem você rir. Elas poderão
+		ensiná-lo algo que você nunca fez. Elas, geralmente, te dão uma quantidade enorme de prazer... Acredite! É real!
+		Mas somente por uma "Estação".
+    </p>
+
+<hr>
+
+    <ul id="cores">
+        <li>Pink</li>
+        <li>Red</li>
+        <li>Green</li>
+        <li>Blue</li>
+        <li>yellow</li>
+    </ul>
+
+<hr>
+
+    <nav id="vertical">
+        <ul>
+            <li><a href="http://www.uol.com.br" target="_blank">UOL</a></li>
+            <li><a href="3_textos.html">Textos</a></li>
+            <li><a href="#" onclick="alert('oi')">JavaScript</a></li>
+            <li><a href="#">Quebrado</a></li>
+        </ul>
+    </nav>
+
+<hr>
+
+    <nav id="horizontal">
+        <ul>
+            <li><a href="http://www.uol.com.br" target="_blank">UOL</a></li>
+            <li><a href="3_textos.html">Textos</a></li>
+            <li><a href="#" onclick="alert('oi')">JavaScript</a></li>
+            <li><a href="#">Quebrado</a></li>
+        </ul>
+    </nav>
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+
+</head>
+
+<body>
+<div>
+  <input type="button" name="botao" id="botao" value="Button">
+</div>
+<div id="resposta" style="border:black solid 1px"></div>
+
+
+
+<script type="text/javascript" language="javascript">
+		document.querySelector('#botao').addEventListener('click',()=>{					
+					
+      var ajax = new XMLHttpRequest();//readyState = 0
+				  ajax.onreadystatechange = ()=>{
+							if(ajax.readyState == 4){
+								let resp = document.querySelector('#resposta');
+
+                let conteudo = ajax.responseXML;
+                let nome = conteudo.getElementsByTagName('nome')[0].firstChild.nodeValue;
+                let curso1=conteudo.getElementsByTagName('curso')[0].firstChild.nodeValue;
+                alert(curso1);
+
+                resp.appendChild(document.createTextNode(nome));//dom core
+                resp.appendChild(document.createElement('br'));//dom core
+                resp.appendChild(document.createTextNode(curso1));//dom core
+                resp.appendChild(document.createElement('br'));//dom core
+                
+                resp.appendChild(document.createTextNode(conteudo.getElementsByTagName('curso')[1].firstChild.nodeValue));//dom core
+                resp.appendChild(document.createElement('br'));//dom core
+							}
+					}
+					ajax.open("GET","arquivo.xml",true); //readyState = 1
+					ajax.send();//readyState = 2
+	  });
+</script>
+</body>
+</html>

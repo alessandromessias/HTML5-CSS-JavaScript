@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+   /* JSON - JavaScript Object Notation */
+
+   //array
+   let Alunos = ['Paulo','Mario','Carlos'];//Array Alunos[0] = 'Paulo'
+   document.write(Alunos[0]+"<br>");
+   document.write(Alunos[1]+"<br>");     
+    document.write(Alunos[2]+"<br>"); 
+
+
+    //object
+    let Alunos2 = { nome:"Paulo",mesa:"10",empresa:"Impacta"};
+    document.write(Alunos2+"<br>"); 
+    document.write(Alunos2.nome+"<br>");
+    document.write(Alunos2.mesa+"<br>");
+    document.write(Alunos2.empresa+"<br>");
+
+    document.write("<hr>");
+    //array dentro de object e objectc dentro de array
+    let Alunos3 =   [
+                        {"nome":"Paulo","mesa":"10","cursos":["php","JavaScript"]},
+                        {"nome":"Mario","mesa":"20","cursos":["HTML","CSS"]},
+                        {"nome":"Carlos","mesa":"30","cursos":["Pyton","Corte e costura"]}
+
+                    ];
+    document.write(Alunos3[0].cursos[0])  ;//php              
+
+</script>
+</body>
+</html>

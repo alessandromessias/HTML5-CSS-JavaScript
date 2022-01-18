@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function teste(resolve,reject){
+            setTimeout(()=>{
+                reject("A promise 1 deu errado");
+            },2000);
+        }
+
+        //promise1.then();
+        //promise1.catch();
+
+        //promise1.then().catch();
+        let promise1 = new Promise(teste);
+        promise1.then((resultado)=>{
+            console.log(resultado);
+        }).catch((resultado)=>{
+            console.log(resultado);
+        });
+    </script>
+</body>
+</html>

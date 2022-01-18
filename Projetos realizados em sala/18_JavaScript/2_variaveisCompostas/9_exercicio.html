@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            border:1px solid black;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <input type="password" id="entrada"><br>
+    Fundo: <input type="color" id="fundo"><br>
+    Fonte: <input type="color" id="fonte"><br>
+    <input type="button" id="botao" value="Entrar Info">
+
+    <p id="texto">Texto</p>
+
+
+    <script>
+        /*
+    document.getElementById('botao').addEventListener('click',()=>{
+        var texto = document.querySelector('#entrada').value;
+        var fundo = document.querySelector('#fundo').value;
+        var fonte = document.querySelector('#fonte').value;
+
+        var paragrafo = document.querySelector('p')
+        paragrafo.style.backgroundColor = fundo;
+        paragrafo.style.color=fonte;
+        paragrafo.innerHTML = texto;
+    });
+*/
+/*
+document.getElementById('botao').addEventListener('click',()=>{
+        var texto = document.getElementById('entrada').value;
+        var fundo = document.getElementById('fundo').value;
+        var fonte = document.getElementById('fonte').value;
+
+        //var paragrafo = document.getElementById('texto')
+        var paragrafo = document.getElementsByTagName('p')[0]
+        paragrafo.style.backgroundColor = fundo;
+        paragrafo.style.color=fonte;
+        paragrafo.innerHTML = texto;
+    });
+    */
+   /*
+   function transforma(){
+        var texto = document.getElementById('entrada').value;
+        var fundo = document.getElementById('fundo').value;
+        var fonte = document.getElementById('fonte').value;
+
+        //var paragrafo = document.getElementById('texto')
+        var paragrafo = document.getElementsByTagName('p')[0]
+        paragrafo.style.backgroundColor = fundo;
+        paragrafo.style.color=fonte;
+        paragrafo.innerHTML = texto;
+   }
+   document.getElementById('botao').addEventListener('click',transforma);
+   */
+   function transforma(){
+        //var paragrafo = document.getElementById('texto')
+        var paragrafo = document.getElementsByTagName('p')[0]
+        paragrafo.style.backgroundColor = document.getElementById('fundo').value;
+        paragrafo.style.color=document.getElementById('fonte').value;
+        paragrafo.innerHTML = document.getElementById('entrada').value;
+   }
+   document.getElementById('botao').addEventListener('click',transforma);
+    </script>
+
+</body>
+</html>

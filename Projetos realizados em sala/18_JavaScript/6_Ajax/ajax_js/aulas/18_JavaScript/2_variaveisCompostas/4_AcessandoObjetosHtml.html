@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <input type="button" id="um" value="Oi" class="formata" style="color:red;font-family: Arial;">
+    <hr>
+    <input type="button" id="dois" value="Ui" class="formata">
+    <hr>
+    <input type="button" id="tres" value="Ai" >
+    <hr>
+    <p class="formata">Paragrafo 1</p>
+    <p>Paragrafo 2</p>
+    <p>Paragrafo 3</p>
+    <hr>
+
+<script>
+    let caixasInput = document.getElementsByTagName('input');
+    document.write(caixasInput + "<br>");//[object HTMLCollection]
+
+    //pegar as informações do primeiro inpur
+    document.write(caixasInput[0] + "<br>");//[object HTMLInputElement]
+    document.write(caixasInput[0].type + "<br>");
+    document.write(caixasInput[0].id + "<br>");
+    document.write(caixasInput[0].value + "<br>");
+    caixasInput[0].value = "Rivotril";
+    document.write(caixasInput[0].value + "<br>");
+
+    document.write(caixasInput[0].style.color + "<br>");
+    caixasInput[0].style.color = "green";
+    document.write(caixasInput[0].style.color + "<br>");
+</script>
+</body>
+
+</html>

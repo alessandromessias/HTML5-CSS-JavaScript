@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+      let nasc = new Date();
+      alert(nasc.getDay())
+    let dia = nasc.getDay()
+    switch(dia){
+        case 0: 
+            var diaSemana = "Domingo";
+            break;
+        case 1: 
+            var diaSemana = "Segunda-Feira";
+            break;
+        case 2: 
+            var diaSemana = "Terça-Feira";
+            break;
+        case 3: 
+            var diaSemana = "Quarta-Feira";
+            break;
+        case 4: 
+            var diaSemana = "Quinta-Feira";
+            break;
+        case 5: 
+            var diaSemana = "Sexta-Feira";
+            break;
+        case 6: 
+            var diaSemana = "Sábado";
+            break;    
+    }
+    document.write(diaSemana);
+    </script>
+</body>
+</html>

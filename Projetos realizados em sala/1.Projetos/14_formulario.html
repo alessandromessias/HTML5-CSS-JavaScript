@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       label{
+           width:130px;
+           display:inline-block;
+           
+       }
+    </style>
+</head>
+<body>
+    <form action="http://www.edupretel.com.br/html5_impacta/mensagem.php" method="post">
+        <fieldset>
+            <legend>Informações Pessoais</legend>
+            <p>
+                <label for="nome"> Nome:</label>
+                <input type="text" name="nome" id="nome" placeholder="Digite o seu nome" required >
+            </p>
+            <p>
+                <label for="email"> Email:</label>
+                <input type="email" name="email" id="email" placeholder="Digite o seu email"  />
+            </p>
+            <p>
+                <label for="senha"> Senha:</label>
+                <input type="password" name="senha" id="senha"  >
+            </p>
+            <p>
+                <label for="data"> Data Nascimento:</label>
+                <input type="date" name="data" id="data" placeholder="Digite o seu senha"  >
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Locações</legend>
+
+            <p>
+                <label for="cidadeNasc">Cidade Nascimeto</label>
+                <select name="cidadeNasc" id="cidadeNasc" required>
+                    <option value="">Escolha...</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="PA">Pará</option>
+                    <option value="BA" selected="selected">Bahia</option><!-- selected estilo XHTML-->
+                    <option value="TO">Tocantins</option>
+                    <option value="AM">Amazonas</option>
+                </select>
+            </p>
+            <p>
+                <label for="cidadeMoradia">Cidade Moradia</label>
+                <select name="cidadeMoradia[]" id="cidadeMoradia" multiple>
+                    <option value="SP">São Paulo</option>
+                    <option value="PA" selected>Pará</option>
+                    <option value="BA">Bahia</option>
+                    <option value="TO" selected>Tocantins</option>
+                    <option value="AM">Amazonas</option>
+                </select>
+            </p>
+
+        </fieldset>
+        <p>Sexo:<br>
+            
+            <input type="radio" name="sexo" id="sexoM" value="M">
+            <label for="sexoM" >Masculino</label>
+            <input type="radio" name="sexo" id="sexoF" value="F" checked>
+            <label for="sexoF" >Feminino</label>
+
+        </p>
+
+        <p>Idiomas:<br>
+            
+            <input type="checkbox" name="idiomas[]" id="idiomasI" value="ing">
+            <label for="idiomasI" >Inglês</label><br>
+
+            <input type="checkbox" name="idiomas[]" id="idiomasE" value="esp">
+            <label for="idiomasE" >Espanhol</label><br>
+
+            <input type="checkbox" name="idiomas[]" id="idiomasF" value="frc">
+            <label for="idiomasF" >Frances</label><br>
+
+            <input type="checkbox" name="idiomas[]" id="idiomasJ" value="jpn">
+            <label for="idiomasj" >Japones</label><br>
+        </p>
+
+
+        <p>
+            <label for="cpf"> CPF:</label>
+            <input  type="text" 
+                    name="cpf" 
+                    id="cpf" 
+                    title="Digite o cpf no formato nnn.nnn.nnn-nn"
+                    pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" 
+                    oninvalid="return alert('cpf Invalido Guns')"
+                    placeholder="Digite o seu cpf"  
+                    required
+            >
+        </p>
+        <p>
+            <input type="hidden" name="recipient" id="recipient" value="edu@edupretel.com.br">
+            <input type="hidden" name="subject" id="subject" value="Quero uma peruca gotica">
+            <input type="hidden" name="redirect" id="redirect" value="obrigado.html">
+        </p>
+        <p>
+            <input type="reset" value="Limpar Formulario">
+            <input type="submit" value="Enviar o formulário">
+
+        </p>
+    </form>
+    
+</body>
+</html>

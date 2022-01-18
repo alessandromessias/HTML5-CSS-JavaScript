@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       /*
+       class decreve a variavel do tipo object => planta da casa
+
+       class Arquivo
+       {
+           var nome;
+           var tamanho;
+           var tipo;
+           var local;
+
+           function abrir(){
+
+           }
+           function ler(){
+
+           }
+       }
+
+       new => construtor de objects a partir de uma class
+
+       let produtos = new Arquivo;
+       produtos.nome="prod.txt";
+       produtos.tamanho = 355;
+       produtos.ler();
+
+       let clientes = new Arquivo;
+       clientes.ler();
+       */
+
+       class Arquivos{
+           constructor(nome,tam,tipo,local){
+               this.nome = nome;
+               this.tamanho = tam;
+               this.tipo = tipo;
+               this.local = local;
+           }
+           //function valida()
+           valida(){
+               alert("eu sou a valida()"+this.nome);
+           }
+       }
+
+       let produtos = new Arquivos('prod.txt',256,'texto','c:');
+       //alert(produtos);
+       console.log(produtos);
+       document.write(produtos);
+        console.log(produtos.nome);
+       produtos.nome="secadores.txt";
+       console.log(produtos.nome);
+       let clientes = new Arquivos('cli.txt',5000,'texto','e:');
+       console.log(clientes);
+       let produtos2 = produtos;
+        console.log(produtos2);
+        produtos.tipo="insuportavel";
+        console.log(produtos2);
+        console.log(produtos);
+        //valida();//2_objetos.html:64 Uncaught ReferenceError: valida is not defined
+        clientes.valida();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

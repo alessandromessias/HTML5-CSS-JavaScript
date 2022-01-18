@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+       /*
+       CLASS DESCREVE A VARIAVEL(PLANTA DE UMA CASA)
+       VARIAVEL TIPO OBJETO É CRIADA A PARTIR DA PLANTA (A CASA)
+
+       class Arquivos
+       {
+           var nome
+           var tamanho
+           var tipo
+           var local
+
+           function abrir(){
+
+           }
+           function ler(){
+
+           }
+           function fechar(){
+
+           }
+       }
+
+       new é o construtor de objetos
+       this aponta para o objeto(casa que esta sendo construida)
+
+
+       let produtos = new Arquivos;
+       produtos.nome="contas.txt";
+       produtos.tamanho = '25kb';
+       produtos.tipo='texto';
+       produtos.local='contasApAGAR';
+       produtos.abrir();
+
+        let clientes = new Arquivos;
+       clientes.nome="cli.txt";
+       clientes.tamanho = '360kb';
+       clientes.tipo='texto';
+       clientes.local='mailing';
+       clientes.abrir();
+
+
+
+      
+       */
+       class Arquivos{
+           constructor(nome,tam,tipo,local){
+                this.nome = nome;
+                this.tamanho = tam;
+                this.tipo = tipo;
+                this.local = local;
+           }
+           valida(){
+               alert('eu sou a valida ' + this.nome);
+           }
+       }
+
+       let produtos = new Arquivos("contas.txt",'25kb','texto','contasApAGAR');
+       alert(produtos.tamanho);
+       produtos.valida();
+       /*
+       let produtos = new Arquivos;
+       produtos.nome="contas.txt";
+       produtos.tamanho = '25kb';
+       produtos.tipo='texto';
+       produtos.local='contasApAGAR';
+       produtos.abrir();
+       */
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<title>HTML 5 – A Nova Onda</title>
+<style >
+div{
+	border: 1px solid black;
+	width:300px;
+	height:300px;
+}
+#um{
+	background-color: red;
+	position:static;
+}
+/*
+position relative
+
+as propriedades top, bottom, left e right  FUNCIONAM e 
+serao contadas a partir da posição da caixa(elemento, box) na fila;
+contará a partir das coordenadas iniciais do elemento
+*/
+#dois{
+	background-color: green;
+	position:relative;
+    top:100px;
+    left:100px;
+    z-index: 250;
+}
+#tres{
+	background-color: aqua;
+	position:relative;
+    z-index: 251;
+}
+#quatro{
+	background-color: grey;
+	position:relative;
+    bottom: 250px;
+    left:100px;
+}
+#cinco{
+	background-color: yellow;
+	position:static;
+}
+#seis{
+	background-color: brown;
+	position:relative;
+    left:500px;
+}
+#sete{
+	background-color: cian;
+	position:static;
+}
+#oito{
+	background-color: lightgrey;
+	position:static;
+}
+</style>
+</head>
+<body>
+<div id="um">
+	<h2>um</h2>
+</div>
+<div id="dois">
+	<h2>dois</h2>
+</div>
+<div id="tres">
+	<h2>tres</h2>
+</div>
+<div id="quatro">
+	<h2>quatro
+</h2>
+</div>
+<div id="cinco">
+	<h2>cinco</h2>
+</div>
+<div id="seis">
+	<h2>seis</h2>
+</div>
+<div id="sete">
+	<h2>sete</h2>
+</div>
+<div id="oito">
+	<h2>oito</h2>
+</div>
+ </body>
+</html>

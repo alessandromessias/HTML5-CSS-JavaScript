@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <input type="button" id="um" value="Oi" class="formata" style="color:red;font-family: Arial;">
+    <hr>
+    <input type="button" id="dois" value="Ui" >
+    <hr>
+    <input type="button" id="tres" value="Ai" >
+    <hr>
+    <p class="formata"><em>Paragrafo 1</em> <br></p>
+    <p>Paragrafo 2</p>
+    <p>Paragrafo 3</p>
+    <script>
+    
+        let classe = document.getElementsByClassName('formata');
+        document.write(classe + "<br>");//[object HTMLCollection]
+        
+        document.write(classe[0] + "<br>");//[object HTMLInputElement]
+        document.write(classe[1] + "<br>");//[object HTMLParagraphElement]
+
+        document.write(classe[0].tagName + "<br>");//
+        document.write(classe[1].tagName + "<br>");//
+
+        document.write(classe[0].value + "<br>");//
+        document.write(classe[1].innerText + "<br>");//
+        document.write(classe[1].innerHTML + "<br>");//
+
+        classe[1].innerText = "Novela das 8"
+        
+    </script>
+
+</body>
+</html>

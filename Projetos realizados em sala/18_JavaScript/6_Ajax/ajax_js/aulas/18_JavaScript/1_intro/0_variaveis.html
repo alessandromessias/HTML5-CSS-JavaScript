@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        Simples
+        Strings => alfanumericas
+        Float, Integer => Numericas 15 187 12.69
+        Boolean => true ou False
+
+        Compostas
+        Arrays
+        Objetos
+        */
+
+        //nAO SE DECLARA VARIAVEL
+        //A variavel nao é tipada
+
+        //var nome recebe Edu ou Edu é atribuido à variavel nome
+        nome="edu";//totalmente depreciada
+        window.alert(nome)//boxes JS
+        nome="Monica";
+        alert(nome)
+        nome="André"
+        window.alert('nome')
+
+        //caindo em desuso a palavra var
+        var idade = 60;
+        window.console.log(idade);//console do browser
+        console.log("idade");//console do browser
+
+        var idade = 10000;
+        window.console.log(idade);//console do browser
+        console.log("idade");//console do browser
+
+
+        
+        //iniciando a variavel com let
+        let curso="JavaScript<br>"
+        window.document.write(curso);
+        //window.document.write("<hr>");
+        //let curso="Corte e Costura"
+        curso="Corte e Costura"
+        window.document.write(curso);
+        document.write("<hr>");
+        document.write("oiiii");
+    </script>
+</head>
+<body>
+    <p id="texto" style="color:red">0_Variaveis<br>depois do BR</p>
+</body>
+</html>
+<script>
+    let paragrafo = document.getElementById('texto').innerText;   
+    document.write(paragrafo);
+    document.write("<hr>");
+    paragrafo = document.getElementById('texto').innerHTML;   
+    document.write(paragrafo);
+    document.write("<hr>");
+   document.getElementById('texto').innerText='Casa de papel'; 
+   // document.getElementById('texto').style.color="green";
+</script>

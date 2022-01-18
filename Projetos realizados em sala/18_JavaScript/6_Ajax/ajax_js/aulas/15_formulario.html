@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label{
+            width:200px;
+            display:inline-block;
+            
+        }
+        fieldset{
+            width:50%;
+            border:0;
+        }
+        @media print{
+            .botoes{
+                display:none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form method="POST" action="http://www.edupretel.com.br/html5_impacta/mensagem.php">
+        <!--
+        <p>
+            <label>Nome:
+                <input >
+            </label>
+        </p>
+    -->
+
+    <fieldset summary="explicação do conjunto de informaçoes">
+        <legend>Informações Pessoais</legend>
+    <p>
+        <label for="nome" tabindex="1">Nome:</label>
+        <input id="nome" name="nome" maxlength="3" type="text" autofocus  tabindex="2" required placeholder="Digite seu nome" class="campo">
+    </p>
+    <p>
+        <label for="email" tabindex="3">Email:</label>
+        <input  id="email" 
+                name="email" 
+                type="email" 
+                tabindex="4" 
+                required="required" 
+                class="campo" 
+                disabled
+        />
+    </p>
+    <p>
+        <label for="Senha" tabindex="5">Senha:</label>
+        <input id="senha" autofocus name="senha" type="password" tabindex="6" class="campo" />
+    </p>
+
+    <p>
+        <label for="dataNasc" tabindex="9">Data de Nascimento:</label>
+        <input id="dataNasc" name="dataNAsc" type="date" tabindex="10" class="campo" />
+    </p>
+    </fieldset>
+
+<fieldset> <legend>Locações</legend>
+    <p>
+        <label for="cidadeNasc" >Cidade de Nascimento:</label>
+        <select name="cidadeNasc" id="cidadeNasc">
+            <option value="SP">São Paulo</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="MG">Minas Geraes</option>
+            <option value="PA">Pará</option>
+        </select >
+    </p>
+
+    <p>
+        <label for="cidadeMorou" >Cidade que morou:</label>
+        <select name="cidadeMorou[]" id="cidadeMorou" multiple>
+            <option value="SP">São Paulo</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="MG">Minas Geraes</option>
+            <option value="PA">Pará</option>
+        </select >
+    </p>
+</fieldset>
+
+    <p>
+        Sexo:<br>
+        <label for="sexoM" >Masculino</label>
+        <input id="sexoM" name="sexo" value="M" type="radio" class="campo" />
+        <label for="sexoF" >Feminino</label>
+        <input id="sexoF" name="sexo" value="F" type="radio" class="campo" />
+    </p>
+
+    <p>
+        Idiomas:<br>
+        <label for="ingles" >Ingles</label>
+        <input id="ingles" name="idiomas[]" value="ingles" type="checkbox" class="campo" /><br>
+        
+        <label for="frances" >Frances</label>
+        <input id="frances" name="idiomas[]" value="frances" type="checkbox" class="campo" /><br>
+
+        <label for="alemao" >Alemão</label>
+        <input id="alemao" name="idiomas[]" value="alemao" type="checkbox" class="campo" /><br>
+        
+        
+    </p>
+
+
+    <label for="cpf">CPF:</label>
+    <input  type="text"
+            name="cpf"
+            id="cpf"
+            title="Digite o CPF no formato nnn.nnn.nnn-nn"
+            pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+            oninvalid="return alert('cpf Invalido')"
+    >
+    <p>
+        <input type="hidden" name="recipient" id="recipient"  value="edu@edupretel.com.br" >
+        <input type="hidden" name="subject" id="subject" value="'Cadastro preenchido no Site'" >
+        <input type="hidden" name="redirect" id="redirect" value="obrigado.html" >
+   </p>
+
+
+
+    <p id="botoes">
+        <input type="submit" class="botoes">
+    </p>
+    </form>
+</body>
+</html>

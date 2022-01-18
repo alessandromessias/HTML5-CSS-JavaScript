@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function teste(resolve,reject){
+            setTimeout(()=>{
+                resolve("A promise 1 deu certo");
+            },2000);
+        }
+
+        let promise1 = new Promise(teste);
+        promise1.then((resultado)=>{
+            console.log(resultado);
+        });
+    </script>
+</body>
+</html>

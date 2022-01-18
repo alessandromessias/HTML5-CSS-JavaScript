@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,td,th{
+            border:1px solid #000000;
+           border-collapse: collapse;
+        }
+        table{
+            width:100%;
+        }
+        th{
+            width:20%;
+        }
+    </style>
+    <script>
+        do{
+            var num = prompt('Digite um numero entre 1 e 10');
+        }while(num < 1  || num > 10);
+
+        document.write("<table>");
+            document.write("<th> Numero </th>");
+                        document.write("<th> operação </th>");
+                        document.write("<th> tabuada </th>");
+                        document.write("<th> = </th>");
+                        document.write("<th> Resultado</th>");
+            document.write("</tr>");
+            
+            //for(linha=1;linha<=num;linha++){
+            for(linha=1;linha<=10;linha++){    
+                document.write("<tr>");
+                        document.write("<td>"+linha+"</td>");
+                        document.write("<td> * </td>");
+                        document.write("<td>"+num+"</td>");
+                        document.write("<td> = </td>");
+                        document.write("<td>"+ (num*linha) +"</td>");
+                document.write("</tr>");
+            }    
+        document.write("</table>");
+    </script>
+</head>
+<body>
+    <hr>
+    <table>
+        <tr>
+            <th>Coluna1</th>
+            <th>Coluna2</th>
+            <th>Coluna3</th>
+            <th>Coluna4</th>
+        </tr>
+        <tr>
+            <td>Rosa</td>
+            <td>Margarida</td>
+            <td>Tulipa</td>
+            <td>Tulipa</td>
+
+        </tr>
+        <tr>
+            <td>HRV</td>
+            <td>CRV</td>
+            <td>WRV</td>
+            <td></td>
+        </tr>
+
+    </table>
+</body>
+</html>

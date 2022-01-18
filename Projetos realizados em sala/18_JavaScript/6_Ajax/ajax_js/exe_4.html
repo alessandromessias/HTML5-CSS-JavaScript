@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script type="text/javascript" language="javascript">
+window.onload = ()=>{
+	document.querySelector('#botao').addEventListener('click',()=>{	
+		let resp = document.querySelector('#resposta');	
+				
+				let ajax = new XMLHttpRequest();//readyState = 0
+				
+				ajax.onreadystatechange = ()=>{
+						if(ajax.readyState == 4){
+							alert(ajax.status);//200
+						  alert(ajax.statusText);//ok
+							alert(ajax.responseText);
+              let alunos = JSON.parse(ajax.responseText);
+
+			resp.innerHTML = alunos.dados[0].nome;
+              resp.innerHTML += " - "
+              resp.innerHTML += alunos.dados[0].idade;
+              resp.innerHTML += "<br>"
+
+              resp.innerHTML += alunos.dados[1].nome;
+              resp.innerHTML += " - "
+              resp.innerHTML += alunos.dados[1].idade;
+              resp.innerHTML += "<br>"
+
+              resp.innerHTML += alunos.dados[2].nome;
+              resp.innerHTML += " - "
+              resp.innerHTML += alunos.dados[2].idade;
+              resp.innerHTML += "<br>"
+						}	
+				
+				}
+				ajax.open("GET","arquivo.json",true);//readyState = 1
+				ajax.send();//readyState = 2
+				
+	});			
+}	
+</script>
+</head>
+
+<body>
+<div>
+  <input type="button" name="botao" id="botao" value="Button">
+</div>
+<div id="resposta"></div>
+</body>
+</html>

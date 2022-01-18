@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+      /*Java Script Object Notation
+      Objetos JSON
+       */
+      let teatro={
+          "autor":"Paulo Autran",
+          "atriz":"Tonia Carreiro",
+          "peca":"Quem tem medo...",
+          "duracao":120,
+          "ingresso":true,
+          "valida":function(){
+              alert('Eu valido '+this.peca);
+              return ""
+          }
+      }
+       document.write(teatro.autor + "<br>");
+       document.write(teatro.duracao + "<br>");
+       document.write(teatro.valida());
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<title>HTML 5 – A Nova Onda</title>
+<style >
+div{
+	border: 1px solid black;
+	width:300px;
+	height:300px;
+}
+#um{
+	background-color: red;
+	position:static;
+}
+/*
+posicionamento absolute
+o elemento terá as propriedaes top, left, bottom e right 
+a partir da coordenada zero DO PAI DELE, se o pai nao for static
+neste exemplo será a coordena zero da página
+portanto o elemento sai da fila e a fila ANDA
+*/
+#dois{
+	background-color: green;
+	position:static;
+}
+#tres{
+	background-color: aqua;
+	position:absolute;
+    top:450px;
+    left:600px;
+}
+#quatro{
+	background-color: grey;
+	position:absolute;
+    top:0;
+    right: 0;
+}
+#cinco{
+	background-color: yellow;
+	position:static;
+}
+#seis{
+	background-color: brown;
+	position:static;
+}
+#sete{
+	background-color: cian;
+	position:static;
+}
+#oito{
+	background-color: lightgrey;
+	position:static;
+}
+</style>
+</head>
+<body>
+<div id="um">
+	<h2>um</h2>
+</div>
+<div id="dois">
+	<h2>dois</h2>
+</div>
+<div id="tres">
+	<h2>tres</h2>
+</div>
+<div id="quatro">
+	<h2>quatro
+</h2>
+</div>
+<div id="cinco">
+	<h2>cinco</h2>
+</div>
+<div id="seis">
+	<h2>seis</h2>
+</div>
+<div id="sete">
+	<h2>sete</h2>
+</div>
+<div id="oito">
+	<h2>oito</h2>
+</div>
+ </body>
+</html>

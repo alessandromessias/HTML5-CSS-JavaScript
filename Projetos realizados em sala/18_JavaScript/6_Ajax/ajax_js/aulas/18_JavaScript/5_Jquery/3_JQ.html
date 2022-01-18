@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.1.1.js"></script>
+</head>
+<body>
+    <p>
+        <input type="text" id="entrada" value="Pensamento Positivo" >
+        <input type="button" id="aperte" value="Clique aqui" autofocus>
+    </p>
+    <p id="veja">Bela Recatada e do lar</p>
+    <p id="escuta">London Calling</p>
+
+    <script>
+       //$('#aperte').click();
+       // $('#aperte').click(function(){});
+       // $('#aperte').click(()=>{});
+
+       $('#aperte').click(()=>{
+           let info = $('#entrada').val();
+           $('#escuta').text(info);
+       });
+    </script>
+</body>
+</html>

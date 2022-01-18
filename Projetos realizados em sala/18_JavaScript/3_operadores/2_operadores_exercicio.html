@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+      
+    </script>
+</head>
+<body>
+<input type="text" id="resultado" value="0">
+<br>
+<input type="button" id="incrementa" value="++"> 
+<input type="button" id="decrementa" value="--">   
+<hr>
+
+Num 1: <input type="text" id="num1">
+<br>
+Num 2: <input type="text" id="num2">
+<br>
+<input type="button" id="soma" value="+"> 
+<input type="button" id="subtrai" value="-">
+<input type="button" id="multiplica" value="*"> 
+<input type="button" id="divide" value="/">
+<p>O Resultado é:</p>
+
+<script>
+    //document.getElementById('incrementa').onclick = function(){}
+    //document.querySelector('#incrementa').addEventListener();
+    //document.querySelector('#incrementa').addEventListener('click',function(){});
+    //document.querySelector('#incrementa').addEventListener('click',()=>{});
+    document.querySelector('#incrementa').addEventListener('click',()=>{
+        let resultado = document.querySelector('#resultado');
+        //resultado.value = parseFloat(resultado.value) + 1;
+        //resultado.value = Number(resultado.value) + 1;
+        resultado.value++;
+    });
+    document.querySelector('#decrementa').addEventListener('click',()=>{
+        document.querySelector('#resultado').value--;
+    });
+    /* #############################################################  */
+    document.querySelector('#soma').addEventListener('click',()=>{
+        let num1 = document.querySelector("#num1").value;
+        let num2 = document.querySelector("#num2").value;
+        let paragrafo = document.querySelector('p');
+
+        let resultado = Number(num1)+Number(num2);
+
+        paragrafo.innerText = "O Resultado é: "+resultado;
+
+    });
+
+    document.querySelector('#subtrai').addEventListener('click',()=>{
+        let num1 = document.querySelector("#num1").value;
+        let num2 = document.querySelector("#num2").value;
+        
+        let resultado = Number(num1)-Number(num2);
+
+        document.querySelector('p').innerText = "O Resultado é: "+resultado;
+
+    });
+
+    document.querySelector('#multiplica').addEventListener('click',()=>{
+
+        let resultado = (Number(document.querySelector("#num1").value)) * (Number(document.querySelector("#num2").value));
+
+        document.querySelector('p').innerText = "O Resultado é: "+resultado;
+
+    });
+
+    document.querySelector('#divide').addEventListener('click',()=>{
+        document.querySelector('p').innerText = "O Resultado é: " + (Number(document.querySelector("#num1").value))/(Number(document.querySelector("#num2").value) );
+    });
+</script>
+</body>
+</html>

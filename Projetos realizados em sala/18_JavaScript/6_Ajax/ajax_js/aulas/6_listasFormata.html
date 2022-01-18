@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+        BOX MODEL
+        border:nao mostra e precisa ser especificado
+        Margin: distancia da Borda para fora => para os pais(parent) ou irmaos (siblings)
+        Padding:distancia da borda para dentro => para os filhos(tags) ou conteudo(contents)
+        width:  display:block => 100% do pai dela e PODE ser alterado
+                display:inline => Adequa o tamanho ao conteudo e NÂO PODE ser alterado
+        Height: display:block => Adequa a altura  ao conteudo e PODE ser alterado
+                display:inline => Adequa a altura ao conteudo e NÂO PODE ser alterado 
+                
+        box-sizing:     faz referencia a propriedade Width  
+                        padrao=>box-sizing:content-box =>Width terá o tamano do conteudo
+                        700px(width)+ 50+50(padding) + 10*10(border) = 820px
+                        usual=>box-sizing:border-box => terá o tamanho da caixa toda a partir do lado externo da borda, portanto INCLUI as bordas
+        */
+        p{
+            font-size: 4rem;
+            text-align: justify;
+
+            border:10px solid black;
+            margin:50px;
+            padding:50px;
+            width:700px;
+            box-sizing: border-box;
+            background-color:burlywood ;
+            
+           /* background-clip: border-box; - padrao e nao precisa ser especificado*/
+            /*background-clip: padding-box; - os limites será o padding*/
+            /*background-clip:content-box;*/
+        }
+
+        /* seletor universal 
+        *{
+            margin:0;
+            padding:0;
+        }
+        */
+        /* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+        /* formatacao da lista */
+        ul#lista{
+            background-color: chocolate;
+            border:blue solid 1px;
+            padding: 0;;
+            
+        }
+        ul#lista li{
+            background-color: crimson;
+            border:1px solid black;
+            /*
+           list-style-type: lower-roman;
+           
+           list-style-image: url('gifspequeninos/anipencil.gif');
+           list-style-position: inside;*/
+           list-style-type: none;width:50%;
+        }
+        /* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+        /* FORMATANDO OS MENUS */
+        nav{
+            background-color: lightgreen;
+        }
+        ul{
+            background-color: lightsalmon;
+            padding:0;
+        }
+        li{
+            background-color: lightpink;
+            list-style-type: none;
+            border:3px solid black;
+            width:25%;
+        }
+        nav ul li a{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            display:block;
+        }
+        /* LoVe HAte*/
+        nav a:link,nav a:visited{
+            background-color: red;
+            color:black;
+            text-decoration:none;
+            transition: background-color 1s, color 1s;
+        }
+        nav a:hover{
+            color:white;
+            background-color: black;
+        }
+        nav a:active{
+            color: sienna;
+            background-color: white;
+            font-style: italic;
+            text-decoration: underline;
+        }
+        /* formatar o menu horizontal */
+        nav#horizontal li{
+            float:left;
+            box-sizing: border-box;
+        }
+        /*formatar o menu vertical */
+        nav#vertical li{
+            width:30px;
+            overflow: hidden;
+           transition: width 1s;
+        }
+        nav#vertical li:hover{
+            width:25%;
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <p>Pessoas entram na sua vida por uma "Razão", uma "Estação" ou uma "Vida Inteira". Quando você percebe qual deles é, você vai saber o que fazer por cada pessoa.
+    </p>
+
+    <ul id="lista">
+        <li>Pink</li>
+        <li>Red</li>
+        <li>Blue</li>
+        <li>Green</li>
+        <li>Yellow</li>
+        <li>Brown</li>
+    </ul>
+
+
+ <nav id="vertical">
+    <ul>
+        <li><a href="3_textosss.html">Textos</a></li>
+        <li><a href="http://www.uol.com.br" target="_blank">UOL</a></li>
+        <li><a href="#">Quebrado</a></li>
+        <li><a href="#" onclick="javascript:alert('Palmeiras nao tem mundial!!!')">Pergunta</a></li>
+    </ul>
+ </nav>   
+
+
+ <nav id="horizontal">
+    <ul>
+        <li><a href="3_texto.html">Textos</a></li>
+        <li><a href="http://www.uol.com.br" target="_blank">UOL</a></li>
+        <li><a href="#">Quebrado</a></li>
+        <li><a href="#" onclick="javascript:alert('Palmeiras nao tem mundial!!!')">Pergunta</a></li>
+    </ul>
+ </nav> 
+
+</body>
+</html>

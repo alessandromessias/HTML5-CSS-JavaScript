@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+    <script>
+       do{
+            var num = prompt("escreva um numero entre 1 e 10");
+       }while( num < 1 || num > 10);
+
+       var tabela =' <table border="1">';
+            for(i=1;i<=10;i++){
+                tabela += '<tr>' ;//tabela = tabela + '<tr>'
+                    tabela += "<td>"+i+"</td>";
+                    tabela += "<td> * </td>";
+                    tabela += "<td>"+num+"</td>";
+                    tabela += "<td> = </td>";
+                    tabela += "<td>"+ ( i * num) +"</td>";
+                tabela += '</tr>' ;//tabela = tabela + '</tr>'    
+            }
+        tabela = tabela + " </table>";
+        document.write(tabela);
+    </script>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Coluna1</th>
+            <th>Coluna2</th>
+            <th>Coluna3</th>
+        </tr>
+        <tr>
+            <td>Rosa</td>
+            <td>Margarida</td>
+            <td>Tulipa</td>
+            <td>Rosa</td>
+            <td>Margarida</td>
+            <td>Tulipa</td>
+        </tr>
+        <tr>
+            <td>HRV</td>
+            <td>CRV</td>
+            <td>WRV</td>
+        </tr>
+
+    </table>
+</body>
+</html>

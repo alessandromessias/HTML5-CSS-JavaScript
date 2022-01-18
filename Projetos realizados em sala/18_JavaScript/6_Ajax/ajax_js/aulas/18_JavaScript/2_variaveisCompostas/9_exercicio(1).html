@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            border:1px solid black;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <input type="text" id="entrada"><br>
+    Fundo: <input type="color" id="fundo"><br>
+    Fonte: <input type="color" id="fonte"><br>
+    <input type="button" id="botao" value="Entrar Info">
+
+    <p id="texto" style="display: none;">Texto</p>
+
+<script>
+    //window.document.getElementById('botao').onclick = function(){"instruçoes"}
+    //document.getElementById('botao').onclick = function(){"instruçoes"}
+    //document.querySelector('#botao').onclick = function(){"instruçoes"}
+    //document.querySelector('#botao').addEventListener('click',nomedafuncao);
+     //document.querySelector('#botao').addEventListener('click',function(){ instruções});
+     document.querySelector('#botao').addEventListener('click',function(){ 
+            let entrada = document.querySelector('#entrada').value;
+            let fundo = document.querySelector('#fundo').value;
+            let fonte = document.querySelector('#fonte').value;
+
+            let texto = document.querySelector('#texto');
+            texto.innerHTML = entrada;
+            texto.style.backgroundColor = fundo;
+            texto.style.color = fonte;
+            texto.style.fontSize = '30px';
+            texto.style.display = "block"
+
+
+            
+
+     });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript var</title>
+    <script>
+        /*
+        Simples
+        Strings => alfanumericas
+        Float, Integer => Numericas
+        Boolean => true ou False
+
+        Compostas
+        Arrays
+        Objetos
+        */
+    nome="Edu"; //totalmente depreciada
+    window.alert(nome);
+    nome="Monica";
+    alert(nome);//window w o objeto raiz e pode ser omitido
+
+    //iniciar a variavel com a palavra ver - escopo da variavel - escopo local ou global
+    var idade=61
+    window.console.log(idade);
+
+    //Iniciado a variavel com let
+    
+    let curso="JavaScript <br>";
+    window.document.write(curso);
+    window.document.write("<hr>");
+    window.document.write("oiiii");        
+        
+    </script>
+</head>
+<body>
+    <p id="texto">0_Variaveis</p>
+</body>
+</html>
+<script>
+     let conteudo= window.document.getElementById('texto').innerText; 
+     alert(conteudo);
+     let tchau= "Gente, Boa Noite!!!";
+     window.document.getElementById('texto').innerText=tchau; 
+
+</script>

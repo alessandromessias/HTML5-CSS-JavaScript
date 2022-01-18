@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            var elementoHTML = document.getElementById('um');
+            /*
+            elementoHTML será um objeto criado a partir dr uma classe object HTMLInputElement
+            e estará RELACIONADO ao elemento HTML, ou seja, a alteraçao feita na variavel
+            tambem ocorrerá no elemento HTML
+            */
+            console.log(elementoHTML);
+            alert(elementoHTML);//[object HTMLInputElement]
+            console.log(elementoHTML.tagName);//input
+            console.log(elementoHTML.type);//button
+            console.log(elementoHTML.id);//um
+            console.log(elementoHTML.value);//oi
+            console.log(elementoHTML.className);//formata
+            console.log(elementoHTML.style);//[object CSSStyleDeclaration]
+            alert(elementoHTML.style);//[object CSSStyleDeclaration]
+            console.log(elementoHTML.style.color);//red
+            console.log(elementoHTML.style.fontFamily);//Arial
+
+           elementoHTML.value="Fafa de Belem" ;
+          elementoHTML.style.color="blue";
+          elementoHTML.style.fontFamily="Impact"
+          elementoHTML.style.backgroundColor="yellow"
+           // elementoHTML.type="text";
+        }
+    </script>
+</head>
+<body>
+    <input type="button" id="um" value="Oi" class="formata" style="color:red;font-family: Arial;">
+    <hr>
+    <input type="button" id="dois" value="Ui" class="formata">
+    <hr>
+    <input type="button" id="tres" value="Ai" >
+    <hr>
+    <p class="formata">Paragrafo 1</p>
+    <p>Paragrafo 2</p>
+    <p>Paragrafo 3</p>
+</body>
+</html>

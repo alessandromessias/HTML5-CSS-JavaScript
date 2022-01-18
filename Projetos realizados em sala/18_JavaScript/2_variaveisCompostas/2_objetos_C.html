@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        objetos JSON - JavaScriptObjectNotation
+        */
+        //let teatro = {"ator":"Paulo Autran","atriz":"Tonia Carrero","peca":"Quem tem medo...",}....
+        let teatro = {  "ator":"Paulo Autran",
+                        "atriz":"Tonia Carrero",
+                        "peca":"Quem tem medo...",
+                        "duracao":120,
+                        "ingresso":true,
+                        "outros":['Gerson Brenner','Suzana Vieira','Juliana Paes'],
+                        "valida":()=>{
+                            alert("Eu valido "+teatro.ator);
+                        }
+                    };
+        
+        document.write(teatro);
+        alert(teatro);
+        document.write(teatro.ator);
+        teatro.ator = "Toni Ramos";
+        document.write(teatro.ator);
+        teatro.valida();
+
+        let teatro2 = teatro;
+        console.log(teatro2);
+        document.write(teatro2.atriz);
+        teatro.atriz="Eva Vilma";
+        document.write(teatro2.atriz);
+        teatro2.valida();
+
+        document.write(teatro.outros[2]);
+
+      
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.1.1.js"></script>
+
+</head>
+<body>
+    <ol id="series">
+        <li>La Casa de Papel</li>
+        <li>Amizade Dolorida</li>
+        <li>Merli</li>
+        <li>Lupin</li>
+    </ol>
+    <p>
+        <input type="text" id="entrada" value="Pensamento Positivo" >
+        <input type="button" id="aperte" value="Clique aqui" autofocus>
+    </p>
+    <p id="veja">Bela Recatada e do lar</p>
+    <p id="escuta">London Calling</p>
+
+    <script>
+      
+      $('#veja').animate({"margin-left":"+200"},3000);
+
+    $('#series').on('dblclick','li',function(){
+        //$(this).animate({"margin-left":"+200"},3000);
+        //$(this).remove();
+
+        //$(this).animate({"margin-left":"+200"},3000).remove();
+
+        $(this).animate({"margin-left":"+200"},3000,function(){
+            $(this).remove();
+        });
+    });
+    </script>
+</body>
+</html>

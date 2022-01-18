@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+      
+    </script>
+</head>
+<body>
+<input type="text" id="resultado" value="0">
+<br>
+<input type="button" id="incrementa" value="++" > 
+<input type="button" id="decrementa" value="--">   
+<hr>
+
+Num 1: <input type="text" id="num1">
+<br>
+Num 2: <input type="text" id="num2">
+<br>
+<input type="button" id="soma" value="+"> 
+<input type="button" id="subtrai" value="-">
+<input type="button" id="multiplica" value="*"> 
+<input type="button" id="divide" value="/">
+<p>O Resultado é:</p>
+
+<script>
+    //incremento e decremento
+    //document.getElementById('incrementa').onclick = function(){
+    //document.getElementById('incrementa'). addEventListener('click',function(){});
+    document.getElementById('incrementa'). addEventListener('click',function(){
+        let caixa =  document.getElementById('resultado');
+        //caixa.value = caixa.value + 1
+        caixa.value++;
+    });    
+    //}
+
+    document.getElementById('decrementa'). addEventListener('click',function(){
+        let caixa =  document.getElementById('resultado');
+        //caixa.value = caixa.value + 1
+        caixa.value--;
+    }); 
+    //////////////////////////////////////////////////////////////////////
+    //calculadora
+    //document.querySelector("#soma").addEventListener('click',function(){});
+    //document.querySelector("#soma").addEventListener('click',()=>{});
+    document.querySelector("#soma").addEventListener('click',()=>{
+        let num1 = document.querySelector("#num1").value;
+        let num2 = document.querySelector("#num2").value;
+        //let resposta = document.getElementsByTagName('p');//resposta[0]
+        //let resposta = document.querySelectorAll('p');//resposta[0]
+        let resposta = document.querySelector('p');//resposta
+
+        let resultado = parseFloat(num1)+parseFloat(num2);
+        //resposta.innerHTML = resultado
+        
+        resposta.innerHTML = "A soma de "+ num1 +" com " + num2 +" é: "+ resultado;
+        
+
+    });
+
+    document.querySelector("#subtrai").addEventListener('click',()=>{
+        let num1 = document.querySelector("#num1").value;
+        let num2 = document.querySelector("#num2").value;
+        let resposta = document.querySelector('p');//resposta
+        let resultado = parseFloat(num1)-parseFloat(num2);
+        resposta.innerHTML = "A subtração de "+ num1 +" com " + num2 +" é: "+ resultado;
+    });
+</script>
+</body>
+</html>
